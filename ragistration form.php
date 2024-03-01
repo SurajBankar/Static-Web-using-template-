@@ -21,19 +21,20 @@ include "./common components/leftNavbar.php";
             
             <div class="row">
             <div class="col-md-6">
+
                                     <h3 class="center1">Ragistration Form</h3>
-                                    <form role="form" >
+                                    <form action="calculations.php" method="post">
                                         <div class="form-group">
                                             <label>Employee Name</label>
-                                            <input class="form-control" />                  
+                                            <input name="name" class="form-control" />                  
                                         </div>
                                         <div class="form-group">
                                             <label>City</label>
-                                            <input class="form-control" />                  
+                                            <input name="city" class="form-control" />                  
                                         </div>
                                         <div class="form-group">
                                             <label>Salary</label>
-                                            <input class="form-control" />                  
+                                            <input name="salary" class="form-control" />                  
                                         </div>
                                         <div class="align-center">
                                         <button type="submit" name="formAddData" class="btn btn-primary center1">Submit</button>

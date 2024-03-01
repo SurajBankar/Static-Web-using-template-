@@ -60,8 +60,8 @@ while($row=mysqli_fetch_array($data))
                                             <td><?php echo $row['name']  ?></td>
                                             <td><?php echo $row['city']  ?></td>
                                             <td class="center"><?php echo $row['salary']  ?></td>
-                                            <td class="center align-center"> <a href="#"><button class="btn btn-default"><i class="fa fa-eye" ></i>View</button></a>
-                                          <a href="view.php"><button class="btn btn-primary"><i class=" fa fa-refresh "></i>Update</button></a>
+                                            <td class="center align-center"> <a href="ragistration form.php"><button class="btn btn-default"><i class="fa fa-eye" ></i>View</button></a>
+                                          <a href="ragistration form.php"><button class="btn btn-primary"><i class=" fa fa-refresh "></i>Update</button></a>
 											<button class="btn btn-danger"><i class="fa fa-pencil"></i> Delete</button></td>
                                             </form>
                                         </tr>
