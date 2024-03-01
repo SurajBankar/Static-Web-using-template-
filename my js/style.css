@@ -1,0 +1,14 @@
+.text-end{
+    text-align: end;
+}
+.center1{
+    text-align: center;
+}
+.align-center{
+    align-items: center;
+    justify-content: center;
+display: flex;
+}
+.border{
+    border: 1px solid black;
+}
