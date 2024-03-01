@@ -18,7 +18,7 @@ include "./common components/leftNavbar.php";
         <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2 class="a">Employee Managemant</h2>   
+                     <h2 class="a">Salary</h2>   
                         <h5 class="a">Welcome Jhon Deo , Love to see you back. </h5>
                        
                     </div>
@@ -31,7 +31,6 @@ include "./common components/leftNavbar.php";
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading text-end">
-                        <a href="ragistration form.php" class="btn btn-primary">Add Employee</a>
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -42,6 +41,8 @@ include "./common components/leftNavbar.php";
                                             <th>Name</th>
                                             <th>City</th>
                                             <th>Salary</th>
+                                            <th>Present Days</th>
+                                            <th>Payment</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -59,13 +60,12 @@ while($row=mysqli_fetch_array($data))
                                             <td><?php echo $count  ?></td>
                                             <td><?php echo $row['name']  ?></td>
                                             <td><?php echo $row['city']  ?></td>
-                                            <td class="center"><?php echo $row['salary']  ?></td>
+                                            <td class="center salary" ><?php echo $row['salary']  ?></td>
+                                            <td><input class="presentDays" onkeyup="calculatePayment()" type="text"></td>
+                                            <td><input class="payment" type="text"></td>
                                             <td class="center align-center"> 
-                                            <form action="view.php" method="post">
-                                            <button type="submit" name="view" value="<?php echo $row['eid']  ?>" class="btn btn-default"><i class="fa fa-eye" ></i>View</button>
-                                            </form>
                                             <form action="update.php" method="post">
-                                            <button type="submit" name="update" value="<?php echo $row['eid']  ?>" class="btn btn-primary"><i class=" fa fa-refresh "></i>Update</button>
+                                            <button type="submit" name="update" value="<?php echo $row['eid']  ?>" class="btn btn-primary"><i class="fa fa-plus-square" aria-hidden="true"></i>ADD</button>
                                             </form>
                                             <form action="calculations.php" method="post">
 											<button type="submit" name="delete" value="<?php echo $row['eid']  ?>" class="btn btn-danger"><i class="fa fa-pencil"></i> Delete</button></td>

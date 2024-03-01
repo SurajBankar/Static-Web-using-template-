@@ -21,49 +21,46 @@ include "./common components/leftNavbar.php";
             <div class="row">
             <div class="col-md-6">
 
-                                    <h3 class="center1">VIEW</h3>
+                                    <h3 class="center1">UPDATE</h3>
                                     <?php
-                                    if(isset($_POST['view']))
+                                    if(isset($_POST['update']))
                                     {
 include 'my js/connection.php';
-$id=$_POST['view'];
+$id=$_POST['update'];
 $data=mysqli_query($con,"SELECT * FROM `employee_data` WHERE `eid`=$id");
 $row=mysqli_num_rows($data);
+
 while($row=mysqli_fetch_array($data))
 {
 
-
-
                                         ?>
 
-
-                                    <form action="#" method="post">
-                                    <div class="form-group">
-                                            <label>ID</label>
-                                            <input  value="<?php echo $row['eid']  ?>" class="form-control" />                  
-                                        </div>
+                                    <form action="calculations.php" method="post">                                  
                                         <div class="form-group">
                                             <label>Employee Name</label>
-                                            <input  value="<?php echo $row['name']  ?>" class="form-control" />                  
+                                            <input name="name" value="<?php echo $row['name']  ?>" class="form-control" />                  
                                         </div>
                                         <div class="form-group">
                                             <label>City</label>
-                                            <input  value="<?php echo $row['city']  ?>" class="form-control" />                  
+                                            <input name="city" value="<?php echo $row['city']  ?>" class="form-control" />                  
                                         </div>
                                         <div class="form-group">
                                             <label>Salary</label>
-                                            <input  value="<?php echo $row['salary']  ?>" class="form-control" />                  
+                                            <input name="salary" value="<?php echo $row['salary']  ?>" class="form-control" />                  
                                         </div>
                                         <div class="form-group">
                                             <label>Present days</label>
-                                            <input  value="<?php echo $row['presentDays']  ?>" class="form-control" />                  
+                                            <input  name="presentDays" value="<?php echo $row['presentDays']  ?>" class="form-control" />                  
                                         </div>
                                         <div class="form-group">
                                             <label>Payment</label>
-                                            <input  value="<?php echo $row['payment']  ?>" class="form-control" />                  
+                                            <input name="payment" value="<?php echo $row['payment']  ?>" class="form-control" />                  
                                         </div>
                                         <div class="align-center">
-                                        <a href="employee.php" class="btn btn-primary">back to Employee</a>
+                                        <button type="submit" name="update" value="<?php echo $row['eid']  ?>" class="btn btn-primary"><i class="fa fa-pencil"></i> Update</button></td>
+
+                                        <button type="reset" class="btn btn-default"><i class="fa fa-pencil"></i> Reset</button></td>
+
                                         </div>
                                     </form>  
                                     <?php

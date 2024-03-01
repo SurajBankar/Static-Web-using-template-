@@ -27,7 +27,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                         <a  href="employee.php" id='2' onclick="background_color(2)"><i class="fa fa-desktop fa-3x"></i> Employee</a>
                     </li>
                     <li>
-                        <a  href="index.php" id='3' onclick="background_color(3)"><i class="fa fa-qrcode fa-3x"></i> Salary</a>
+                        <a  href="salary.php" id='3' onclick="background_color(3)"><i class="fa fa-qrcode fa-3x"></i> Salary</a>
                     </li>
 						   <li  >
                         <a   href="index.php" id='4' onclick="background_color(4)"><i class="fa fa-bar-chart-o fa-3x"></i> Records</a>
