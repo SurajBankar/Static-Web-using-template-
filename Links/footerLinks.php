@@ -11,4 +11,4 @@
     <script src="assets/js/morris/morris.js"></script>
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
-    <script src="my js/custom1.js"></script>
+    <script src="assets/js/custom1.js"></script>

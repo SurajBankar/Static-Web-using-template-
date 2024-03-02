@@ -1,0 +1,3 @@
+function qqqqqq(){
+    alert("fffff");
+}

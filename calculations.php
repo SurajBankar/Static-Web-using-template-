@@ -77,3 +77,26 @@ if(isset($_POST['delete']))
 
 ?>
 
+<?php
+//delete page => database
+if(isset($_POST['add']))
+{
+  $id=$_POST['add'];
+  $salary=$_POST['salary'];
+  $presentDays=$_POST['presentDays'];
+  $payment=$_POST['payment'];
+
+  $update=mysqli_query($con,"UPDATE `employee_data` SET `presentDays`=' $presentDays',`payment`='$payment' WHERE `eid`=$id");
+  if($update)
+  {
+    echo "<script>alert('payment added')</script>";
+    echo "<script>document.location='salary.php'</script>";
+  }
+  else{
+    echo "<script>alert('something went wrong, check update Query')</script>";
+    echo "<script>document.location='salary.php'</script>";
+  }
+    
+}
+
+?>

@@ -54,26 +54,30 @@ $row=mysqli_num_rows($data);
 $count=1;
 while($row=mysqli_fetch_array($data))
 {
+    $a=$row["payment"];
+    if($a==0)
+    {
                                         ?>
-                                        <tr class="odd gradeX">
-                                           
+                                        <tr class="odd gradeX">     
+                                        <form action="calculations.php" method="post">                                    
                                             <td><?php echo $count  ?></td>
                                             <td><?php echo $row['name']  ?></td>
                                             <td><?php echo $row['city']  ?></td>
-                                            <td class="center salary" ><?php echo $row['salary']  ?></td>
-                                            <td><input class="presentDays" onkeyup="calculatePayment()" type="text"></td>
-                                            <td><input class="payment" type="text"></td>
+                                            <td class="center "  > <input class="salary" name="salary" type="text" value="<?php echo $row['salary']  ?>"></td>
+                                            <td><input class="presentDays" name="presentDays" onkeyup="calculatePayment()" type="text"></td>
+                                            <td><input class="payment" name="payment" type="text"></td>
                                             <td class="center align-center"> 
-                                            <form action="update.php" method="post">
-                                            <button type="submit" name="update" value="<?php echo $row['eid']  ?>" class="btn btn-primary"><i class="fa fa-plus-square" aria-hidden="true"></i>ADD</button>
-                                            </form>
-                                            <form action="calculations.php" method="post">
+                                           
+                                            <button type="submit" name="add" value="<?php echo $row['eid']  ?>" class="btn btn-primary"><i class="fa fa-plus-square" aria-hidden="true"></i>ADD</button>
+                                           
+                                            
 											<button type="submit" name="delete" value="<?php echo $row['eid']  ?>" class="btn btn-danger"><i class="fa fa-pencil"></i> Delete</button></td>
                                             </form>
                                             
                                         </tr>
                                         <?php
 $count=$count+1;
+}
 }
                                         ?>
                                        
@@ -96,10 +100,10 @@ $count=$count+1;
          <!-- /. PAGE WRAPPER  -->
         </div>
    <?php
+ 
 include "./Links/footerLinks.php";
 
 ?>
-    
-   
+
 </body>
 </html>
