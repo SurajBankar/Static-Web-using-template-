@@ -43,8 +43,20 @@ while($row=mysqli_fetch_array($data))
                                             <input  value="<?php echo $row['eid']  ?>" class="form-control" />                  
                                         </div>
                                         <div class="form-group">
+                                            <label>Employee Catagory</label>
+                                            <input  value="<?php echo $row['category']  ?>" class="form-control" />                  
+                                        </div>
+                                        <div class="form-group">
                                             <label>Employee Name</label>
                                             <input  value="<?php echo $row['name']  ?>" class="form-control" />                  
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Employee IMG</label>
+                                            <img src="<?php echo $row['img']  ?>" alt="error" srcset="">               
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Employee UID</label>
+                                            <input  value="<?php echo $row['uid']  ?>" class="form-control" />                  
                                         </div>
                                         <div class="form-group">
                                             <label>City</label>

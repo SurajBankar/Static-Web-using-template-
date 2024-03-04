@@ -18,7 +18,7 @@ include "./common components/leftNavbar.php";
         <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2 class="a">Salary</h2>   
+                     <h2 class="a">Record</h2>   
                         <h5 class="a">Welcome Jhon Deo , Love to see you back. </h5>
                        
                     </div>
@@ -55,7 +55,7 @@ $count=1;
 while($row=mysqli_fetch_array($data))
 {
     $a=$row["payment"];
-    if($a==0)
+    if($a>0)
     {
                                         ?>
                                         <tr class="odd gradeX">     
@@ -63,15 +63,12 @@ while($row=mysqli_fetch_array($data))
                                             <td><?php echo $count  ?></td>
                                             <td><?php echo $row['name']  ?></td>
                                             <td><?php echo $row['city']  ?></td>
-                                            <td class="center"> <input class="salary" name="salary" type="text" value="<?php echo $row['salary']  ?>"></td>
-                                            <td><input class="presentDays" name="presentDays" onkeyup="calculatePayment()" type="text"></td>
-                                            <td><input class="payment" name="payment" type="text"></td>
-                                            <td class="center align-center"> 
-                                           
-                                            <button type="submit" name="add" value="<?php echo $row['eid']  ?>" class="btn btn-primary"><i class="fa fa-plus-square" aria-hidden="true"></i>ADD</button>
-                                           
-                                            
-											<button type="submit" name="delete" value="<?php echo $row['eid']  ?>" class="btn btn-danger"><i class="fa fa-pencil"></i> Delete</button></td>
+                                            <td><?php echo $row['salary']  ?></td>
+                                            <td><?php echo $row['presentDays']  ?></td>
+                                            <td><?php echo $row['payment']  ?></td>
+                                            <td class="center align-center">                                        
+											<button type="submit" name="delete" value="<?php echo $row['eid']  ?>" class="btn btn-danger"><i class="fa fa-pencil"></i> Delete</button>
+                                        </td>
                                             </form>
                                             
                                         </tr>

@@ -23,10 +23,30 @@ include "./common components/leftNavbar.php";
             <div class="col-md-6">
 
                                     <h3 class="center1">Ragistration Form</h3>
-                                    <form action="calculations.php" method="post">
+                                    <form action="calculations.php" method="post" >
+                                        <div class="form-group">
+                                            <label>Select Catagory</label>
+                                            <select class="form-control" name="category" id="">
+                                                <option value="0">Select</option>
+                                                <option value="Administration">Administration</option>
+                                                <option value="Cooking">Cooking</option>
+                                                <option value="Cleaning">Cleaning</option>
+                                                <option value="Security">Security</option>
+                                                <option value="Transport">Transport</option>
+                                                <option value="Support">Support</option>
+                                            </select>            
+                                        </div>
                                         <div class="form-group">
                                             <label>Employee Name</label>
                                             <input name="name" class="form-control" />                  
+                                        </div>
+                                        <div class="form-group">
+                                        <label>Select image:</label>
+                                        <input type="file" name="upload">               
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Employee UID</label>
+                                            <input name="uid" class="form-control" />                  
                                         </div>
                                         <div class="form-group">
                                             <label>City</label>

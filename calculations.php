@@ -10,8 +10,11 @@ if(isset($_POST['formAddData']))
   $name=$_POST['name'];
   $city=$_POST['city'];
   $salary=$_POST['salary'];
+  $uid=$_POST['uid'];
+  $category=$_POST['category'];
+ 
 
-  $AddData=mysqli_query($con,"INSERT INTO `employee_data`(`eid`, `name`, `city`, `salary`) VALUES ('','$name','$city','$salary')");
+  $AddData=mysqli_query($con,"INSERT INTO `employee_data`(`eid`, `category`, `name`, `city`, `salary`, `uid`) VALUES ('','$category','$name','$city','$salary','$uid')");
   if($AddData)
   {
     echo "<script>alert('Data Added')</script>";
